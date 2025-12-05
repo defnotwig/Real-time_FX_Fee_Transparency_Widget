@@ -85,64 +85,6 @@
         margin: 0 auto;
       }
 
-      .demo-header {
-        text-align: center;
-        color: white;
-        margin-bottom: 24px;
-        padding: 0 8px;
-      }
-
-      .demo-header h1 {
-        font-size: clamp(1.5rem, 5vw, 2.5rem);
-        font-weight: 800;
-        margin-bottom: 8px;
-        letter-spacing: -0.02em;
-        /* Ripe brand gradient text effect */
-        background: linear-gradient(
-          90deg,
-          #00d4aa 0%,
-          #7c3aed 50%,
-          #f472b6 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .demo-header p {
-        font-size: clamp(0.875rem, 3vw, 1.1rem);
-        opacity: 0.8;
-        color: #a5b4fc;
-        font-weight: 500;
-      }
-
-      /* Ripe logo - matches official branding */
-      .ripe-logo {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .ripe-logo-icon {
-        width: 32px;
-        height: 32px;
-        background: linear-gradient(135deg, #00d4aa 0%, #7c3aed 100%);
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .ripe-logo-text {
-        font-weight: 800;
-        font-size: 1.75rem;
-        letter-spacing: -0.03em;
-        background: linear-gradient(90deg, #ffffff 0%, #e0e7ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
       .loading {
         text-align: center;
         color: #a5b4fc;
@@ -219,34 +161,6 @@
   </head>
   <body>
     <div class="demo-container">
-      <div class="demo-header">
-        <!-- Ripe Logo with official styling -->
-        <div
-          class="ripe-logo"
-          style="justify-content: center; margin-bottom: 12px"
-        >
-          <div class="ripe-logo-icon">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polygon
-                points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
-              ></polygon>
-            </svg>
-          </div>
-          <span class="ripe-logo-text">ripe</span>
-        </div>
-        <h1>FX Transparency Widget</h1>
-        <p>From stablecoin to e-wallet — instant settlement</p>
-      </div>
-
       <div id="root">
         <div class="loading">
           <p>Loading widget</p>
