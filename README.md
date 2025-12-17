@@ -1,18 +1,19 @@
-Real-Time FX & Fee Transparency Widget
-A production-ready, embeddable React component that displays real-time live FX conversion and fee transparency for stablecoin-to-fiat transactions.
+𝐑𝐞𝐚𝐥𝐓𝐢𝐦𝐞 𝐅𝐗  𝐅𝐞𝐞 𝐓𝐫𝐚𝐧𝐬𝐩𝐚𝐫𝐞𝐧𝐜𝐲 𝐖𝐢𝐝𝐠𝐞𝐭 
+ - 𝐀 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐢𝐨𝐧𝐫𝐞𝐚𝐝𝐲 𝐞𝐦𝐛𝐞𝐝𝐝𝐚𝐛𝐥𝐞 𝐑𝐞𝐚𝐜𝐭 𝐜𝐨𝐦𝐩𝐨𝐧𝐞𝐧𝐭 𝐭𝐡𝐚𝐭 𝐝𝐢𝐬𝐩𝐥𝐚𝐲𝐬 𝐫𝐞𝐚𝐥𝐭𝐢𝐦𝐞 𝐥𝐢𝐯𝐞 𝐅𝐗 𝐜𝐨𝐧𝐯𝐞𝐫𝐬𝐢𝐨𝐧 𝐚𝐧𝐝 𝐟𝐞𝐞 𝐭𝐫𝐚𝐧𝐬𝐩𝐚𝐫𝐞𝐧𝐜𝐲 𝐟𝐨𝐫 𝐬𝐭𝐚𝐛𝐥𝐞𝐜𝐨𝐢𝐧𝐭𝐨𝐟𝐢𝐚𝐭 𝐭𝐫𝐚𝐧𝐬𝐚𝐜𝐭𝐢𝐨𝐧𝐬  
 
-Ripe FX Widget Tailwind CSS License Live Rates
+𝐑𝐢𝐩𝐞 𝐅𝐗 𝐖𝐢𝐝𝐠𝐞𝐭 𝐓𝐚𝐢𝐥𝐰𝐢𝐧𝐝 𝐂𝐒𝐒 𝐋𝐢𝐜𝐞𝐧𝐬𝐞 𝐋𝐢𝐯𝐞 𝐑𝐚𝐭𝐞𝐬
 
-🎯 Features
-✅ Core Functionality
-🔴 LIVE FX Rates: Real-time exchange rates fetched from ExchangeRate API
+Features:
+Core Functionality
+LIVE FX Rates: Real-time exchange rates fetched from ExchangeRate API
 Auto-Refresh: Rates update every 5 minutes automatically
 Multi-Stablecoin Support: USDC, USDT, USDG with official branding
 Full Fee Transparency: Line-by-line breakdown of all charges
 4 Supported Currencies: PHP, THB, IDR, MYR with live rates
 Mobile-Optimized: Responsive design from 320px to desktop
 Accessible: WCAG AA compliant, keyboard navigable
-🌟 Bonus Features
+
+Bonus Features
 Comparison View: Side-by-side Ripe vs Legacy Banks
 Dark/Light Theme: Toggle with smooth transitions
 Live Rate Indicator: Visual status showing rate freshness
@@ -21,7 +22,8 @@ Fallback Support: Graceful degradation to cached rates if API fails
 Detailed Math Breakdown: Expandable step-by-step calculations
 Preset Amounts: Quick selection buttons
 Trust Signals: Visual indicators of transparency
-🚀 Quick Start
+
+Quick Start
 Option 1: CDN Demo (Fastest)
 Simply open demo.html in your browser. No build tools required!
 
@@ -53,7 +55,8 @@ function App() {
     />
   );
 }
-📋 Component Props
+
+Component Props
 Prop	Type	Default	Description
 defaultCurrency	'PHP' | 'THB' | 'IDR' | 'MYR'	'PHP'	Initial currency selection
 defaultAmount	number	100	Initial USDC amount
@@ -64,7 +67,8 @@ showDirectionToggle	boolean	true	Show Send/Receive toggle
 showStablecoinSelector	boolean	true	Show USDC/USDT/USDG selector
 brandColor	string	'#00d4aa'	Custom brand color (Ripe teal)
 onConversionComplete	function	undefined	Callback with conversion result
-🔴 Live FX Rates API
+
+Live FX Rates API
 The widget fetches real-time exchange rates for both cryptocurrencies and fiat currencies using multiple APIs with automatic fallback:
 
 Primary API: CoinGecko 🦎
@@ -108,13 +112,15 @@ Legacy Provider Fees (For Comparison)
 Transaction Fee: 3.0%
 Network Fee: $5.00 flat
 FX Spread: 2.5% (hidden)
-🎨 Supported Currencies
+
+Supported Currencies
 Currency	Code	Symbol	Decimals
 Philippine Peso	PHP	₱	2
 Thai Baht	THB	฿	2
 Indonesian Rupiah	IDR	Rp	0
 Malaysian Ringgit	MYR	RM	2
-🧮 Calculation Logic
+
+Calculation Logic
 The widget performs transparent calculations in the following steps:
 
 // Step 1: Gross conversion at customer rate
@@ -134,14 +140,16 @@ Gross: 100 × 58.5 = ₱5,850.00
 Transaction fee: 0.5 USDC × 58.5 = -₱29.25
 Network fee: $2 × 58.5 = -₱117.00
 ───────────────────────────────
-Net received: ₱5,703.75
-📱 Mobile Responsiveness
+Net received: ₱5,703.75 
+
+Mobile Responsiveness
 The widget is fully responsive across all devices:
 
 Mobile (320px - 640px): Stacked layout, large touch targets
 Tablet (640px - 1024px): Optimized spacing
 Desktop (1024px+): Full feature display
-🎨 Customization
+
+Customization
 Custom Brand Color
 <FXWidget brandColor="#FF6B6B" />
 Dark Theme by Default
@@ -155,7 +163,8 @@ Custom Event Handling
     // Send to analytics, update parent state, etc.
   }}
 />
-🧪 Testing Scenarios
+
+Testing Scenarios
 Test Case 1: Small Amount
 Input: 10 USDC → PHP
 Expected: ~₱570 (minimum fee applies)
@@ -168,37 +177,29 @@ Expected: ~Rp155,000,000
 Test Case 4: Zero Decimals Currency
 Input: 500 USDC → IDR
 Expected: Rp7,825,000 (no decimal places)
-🔧 Technical Stack
+
+Technical Stack
 Framework: React 18+ with Hooks
 Styling: Tailwind CSS (utility-first)
 Icons: Lucide React
 State Management: React useState/useMemo
 Formatting: Intl.NumberFormat API
-📊 Performance
+
+Performance
 Calculation Time: < 1ms (instant)
 Render Time: < 100ms
 Bundle Size: ~25KB (minified + gzipped)
 Dependencies: Minimal (React, Lucide)
-♿ Accessibility
+
+Accessibility
 WCAG AA Compliant: 4.5:1 color contrast
 Keyboard Navigation: Full tab/arrow key support
 Screen Reader Ready: Semantic HTML + ARIA labels
 Focus Indicators: Clear visual focus states
 Touch Targets: 44px minimum on mobile
-🐛 Troubleshooting
-Issue: Component not rendering
-Solution: Ensure React 18+ is installed and Tailwind CSS is configured.
 
-Issue: Currency symbols not showing
-Solution: Check browser locale support. Use UTF-8 encoding.
 
-Issue: Calculations seem off
-Solution: Verify FX rates in FX_RATES constant. Update as needed.
-
-Issue: Dark mode not working
-Solution: Ensure Tailwind's dark: variant is enabled in config.
-
-🔮 Future Enhancements
+Future Enhancements
  API integration for live FX rates
  More currencies (SGD, VND, KRW, etc.)
  Historical rate charts
@@ -207,10 +208,11 @@ Solution: Ensure Tailwind's dark: variant is enabled in config.
  Export calculations as PDF
  Custom fee configurations
  Batch conversion tool
-📄 License
+ 
+License
 MIT License - feel free to use in your projects!
 
-🤝 Contributing
+Contributing
 Contributions welcome! Please follow these steps:
 
 Fork the repository
@@ -218,21 +220,22 @@ Create feature branch (git checkout -b feature/AmazingFeature)
 Commit changes (git commit -m 'Add AmazingFeature')
 Push to branch (git push origin feature/AmazingFeature)
 Open Pull Request
-📞 Support
+Support
 For questions or issues:
 
 Open a GitHub issue
 Email: support@ripe.example.com
 Documentation: Full API Docs
-🏆 Credits
-Built with ❤️ by the Ripe Team
+
+Credits
+Built with by the Ripe Team
 
 Technologies Used:
 
-React by Facebook
-Tailwind CSS by Tailwind Labs
-Lucide Icons by Lucide
-Intl.NumberFormat by TC39
+React
+Tailwind CSS
+Lucide Icons
+Intl.NumberFormat
 📈 Changelog
 v1.0.0 (2025-12-05)
 ✅ Initial release
@@ -244,4 +247,5 @@ v1.0.0 (2025-12-05)
 ✅ Mobile optimization
 ✅ Detailed math breakdown
 ✅ Accessibility compliance
-Happy Converting! 🚀
+
+Happy Converting! 
