@@ -23,50 +23,6 @@ Detailed Math Breakdown: Expandable step-by-step calculations
 Preset Amounts: Quick selection buttons
 Trust Signals: Visual indicators of transparency
 
-Quick Start
-Option 1: CDN Demo (Fastest)
-Simply open demo.html in your browser. No build tools required!
-
-# Navigate to Frontend folder
-cd Frontend
-
-# Open in browser (Windows)
-start demo.html
-
-# Or use a local server
-python -m http.server 8000
-# Visit http://localhost:8000/demo.html
-Option 2: Integrate into React App
-npm install react react-dom lucide-react
-# Ensure Tailwind CSS is configured in your project
-Then import and use:
-
-import FXWidget from "./FXWidget";
-
-function App() {
-  return (
-    <FXWidget
-      defaultCurrency="PHP"
-      defaultAmount={100}
-      theme="light"
-      showComparison={true}
-      brandColor="#3B82F6"
-      onConversionComplete={(data) => console.log(data)}
-    />
-  );
-}
-
-Component Props
-Prop	Type	Default	Description
-defaultCurrency	'PHP' | 'THB' | 'IDR' | 'MYR'	'PHP'	Initial currency selection
-defaultAmount	number	100	Initial USDC amount
-defaultStablecoin	'USDC' | 'USDT' | 'USDG'	'USDC'	Initial stablecoin selection
-theme	'light' | 'dark'	'light'	Theme preference
-showComparison	boolean	true	Show Ripe vs Legacy comparison
-showDirectionToggle	boolean	true	Show Send/Receive toggle
-showStablecoinSelector	boolean	true	Show USDC/USDT/USDG selector
-brandColor	string	'#00d4aa'	Custom brand color (Ripe teal)
-onConversionComplete	function	undefined	Callback with conversion result
 
 Live FX Rates API
 The widget fetches real-time exchange rates for both cryptocurrencies and fiat currencies using multiple APIs with automatic fallback:
@@ -142,42 +98,6 @@ Network fee: $2 × 58.5 = -₱117.00
 ───────────────────────────────
 Net received: ₱5,703.75 
 
-Mobile Responsiveness
-The widget is fully responsive across all devices:
-
-Mobile (320px - 640px): Stacked layout, large touch targets
-Tablet (640px - 1024px): Optimized spacing
-Desktop (1024px+): Full feature display
-
-Customization
-Custom Brand Color
-<FXWidget brandColor="#FF6B6B" />
-Dark Theme by Default
-<FXWidget theme="dark" />
-Disable Comparison View
-<FXWidget showComparison={false} />
-Custom Event Handling
-<FXWidget
-  onConversionComplete={(result) => {
-    console.log(`User will receive: ${result.netFiatReceived}`);
-    // Send to analytics, update parent state, etc.
-  }}
-/>
-
-Testing Scenarios
-Test Case 1: Small Amount
-Input: 10 USDC → PHP
-Expected: ~₱570 (minimum fee applies)
-Test Case 2: Standard Amount
-Input: 100 USDC → THB
-Expected: ~฿3,490
-Test Case 3: Large Amount
-Input: 10,000 USDC → IDR
-Expected: ~Rp155,000,000
-Test Case 4: Zero Decimals Currency
-Input: 500 USDC → IDR
-Expected: Rp7,825,000 (no decimal places)
-
 Technical Stack
 Framework: React 18+ with Hooks
 Styling: Tailwind CSS (utility-first)
@@ -224,7 +144,7 @@ Support
 For questions or issues:
 
 Open a GitHub issue
-Email: support@ripe.example.com
+Email: ludwigrivera13@gmail.com
 Documentation: Full API Docs
 
 Credits
